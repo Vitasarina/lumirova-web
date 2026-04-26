@@ -1,8 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-// TODO: Replace hero-placeholder.jpg with actual photo of the building at Lumírova 513/8, Ostrava
-import heroImage from '../../public/hero-placeholder.jpg';
 ---
 
 <Layout>
@@ -26,17 +23,18 @@ import heroImage from '../../public/hero-placeholder.jpg';
     <!-- Hero section -->
     <section id="hero" aria-label="Úvod" class="relative pt-14">
       <div class="relative h-[70vh] min-h-[400px] max-h-[640px] overflow-hidden bg-slate-200">
-        <!-- TODO: Replace hero-placeholder.jpg with actual photo of Lumírova 513/8, Ostrava -->
-        <Image
-          src={heroImage}
-          alt="Bytový dům SVJ Lumírova 8,10 v Ostravě — foto bude doplněno"
-          class="w-full h-full object-cover"
-          widths={[640, 1024, 1280, 1920]}
-          sizes="100vw"
-          loading="eager"
-          fetchpriority="high"
-          quality={80}
-        />
+        <picture>
+          <source type="image/webp" srcset="/hero.webp" />
+          <img
+            src="/hero.jpg"
+            alt="Bytový dům SVJ Lumírova 8,10 v Ostravě"
+            class="w-full h-full object-cover"
+            width="1600"
+            height="1200"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </picture>
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 lg:p-14">
           <div class="max-w-5xl mx-auto">
