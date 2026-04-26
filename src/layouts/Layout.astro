@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Společenství vlastníků Lumírova 8,10 | Ostrava',
+  description = 'Společenství vlastníků jednotek bytového domu Lumírova 513/8, 700 30 Ostrava. Kontakty a informace o správě domu.',
+} = Astro.props;
+
+const siteUrl = 'https://lumirova.cz';
+const ogImage = `${siteUrl}/hero-placeholder.jpg`;
+---
+
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:site_name" content="SVJ Lumírova 8,10" />
+  </head>
+  <body class="bg-white text-slate-900 font-sans antialiased">
+    <slot />
+  </body>
+</html>

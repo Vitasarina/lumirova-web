@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+// TODO: Replace hero-placeholder.jpg with actual photo of the building at Lumírova 513/8, Ostrava
+import heroImage from '../../public/hero-placeholder.jpg';
+---
+
+<Layout>
+  <header>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <a href="/" class="text-sm font-semibold text-slate-800 hover:text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded">
+          SVJ Lumírova 8,10
+        </a>
+        <nav aria-label="Hlavní navigace">
+          <ul class="flex gap-6 text-sm text-slate-600 list-none">
+            <li><a href="#o-spolecenstvi" class="hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded">O společenství</a></li>
+            <li><a href="#kontakt" class="hover:text-slate-900 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section id="hero" aria-label="Úvod" class="relative pt-14">
+      <div class="relative h-[70vh] min-h-[400px] max-h-[640px] overflow-hidden bg-slate-200">
+        <!-- TODO: Replace hero-placeholder.jpg with actual photo of Lumírova 513/8, Ostrava -->
+        <Image
+          src={heroImage}
+          alt="Bytový dům SVJ Lumírova 8,10 v Ostravě — foto bude doplněno"
+          class="w-full h-full object-cover"
+          widths={[640, 1024, 1280, 1920]}
+          sizes="100vw"
+          loading="eager"
+          quality={80}
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 lg:p-14">
+          <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
+              Společenství vlastníků<br class="hidden sm:block" /> Lumírova&nbsp;8,10
+            </h1>
+            <p class="text-base sm:text-lg text-slate-200 max-w-xl">
+              Správa a péče o bytový dům v srdci Ostravy od roku 2014.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- O společenství section -->
+    <section id="o-spolecenstvi" aria-labelledby="o-spolecenstvi-heading" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="o-spolecenstvi-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 mb-10">O společenství</h2>
+        <dl class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-slate-50 rounded-xl p-6">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Adresa</dt>
+            <dd class="text-slate-800 font-medium leading-relaxed">
+              Lumírova 513/8<br />
+              700 30 Ostrava
+            </dd>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">IČ</dt>
+            <dd class="text-slate-800 font-medium text-lg">03649873</dd>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Předsedkyně</dt>
+            <dd class="text-slate-800 font-medium">Bc. Sabina Křiváková</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Kontakt section -->
+    <section id="kontakt" aria-labelledby="kontakt-heading" class="py-16 sm:py-20 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="kontakt-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 mb-10">Kontakt</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">E-mailové adresy</h3>
+              <ul class="space-y-2 list-none">
+                <li>
+                  <a
+                    href="mailto:lumirova@lumirova.cz"
+                    class="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded"
+                    aria-label="Napsat e-mail na lumirova@lumirova.cz"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    lumirova@lumirova.cz
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:svj.lumirova8-10@seznam.cz"
+                    class="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded"
+                    aria-label="Napsat e-mail na svj.lumirova8-10@seznam.cz"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    svj.lumirova8-10@seznam.cz
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">Adresa</h3>
+              <address class="not-italic text-slate-700 leading-relaxed">
+                Společenství vlastníků Lumírova 8,10<br />
+                Lumírova 513/8<br />
+                700 30 Ostrava
+              </address>
+            </div>
+          </div>
+
+          <!-- OpenStreetMap embed – no tracking cookies, privacy-safe -->
+          <div class="rounded-xl overflow-hidden border border-slate-200 shadow-sm h-64 lg:h-72">
+            <iframe
+              title="Mapa polohy domu: Lumírova 513/8, 700 30 Ostrava"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=18.2457%2C49.7751%2C18.2557%2C49.7811&layer=mapnik&marker=49.7781%2C18.2507"
+              loading="lazy"
+              class="w-full h-full border-0"
+              allowfullscreen
+              aria-label="Interaktivní mapa OpenStreetMap zobrazující polohu bytového domu Lumírova 513/8 v Ostravě"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-slate-100 py-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+      <p>&copy; {new Date().getFullYear()} Společenství vlastníků Lumírova 8,10</p>
+      <p class="text-center sm:text-right max-w-sm">
+        Tento web nepoužívá žádné sledovací skripty ani cookies třetích stran.
+      </p>
+    </div>
+  </footer>
+</Layout>
