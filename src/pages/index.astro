@@ -41,9 +41,6 @@ import Layout from '../layouts/Layout.astro';
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
               Společenství vlastníků<br class="hidden sm:block" /> Lumírova&nbsp;8,10
             </h1>
-            <p class="text-base sm:text-lg text-slate-200 max-w-xl">
-              Správa a péče o bytový dům v srdci Ostravy od roku 2014.
-            </p>
           </div>
         </div>
       </div>
@@ -52,22 +49,31 @@ import Layout from '../layouts/Layout.astro';
     <!-- O společenství section -->
     <section id="o-spolecenstvi" aria-labelledby="o-spolecenstvi-heading" class="py-16 sm:py-20 bg-white">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="o-spolecenstvi-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 mb-10">O společenství</h2>
-        <dl class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 id="o-spolecenstvi-heading" class="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">O společenství</h2>
+        <p class="text-lg text-slate-600 mb-10 font-medium">Společenství vlastníků Lumírova 8, 10</p>
+        <dl class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-slate-50 rounded-xl p-6">
-            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Adresa</dt>
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Sídlo</dt>
             <dd class="text-slate-800 font-medium leading-relaxed">
-              Lumírova 513/8<br />
+              Lumírova 513/8, Výškovice<br />
               700 30 Ostrava
             </dd>
           </div>
           <div class="bg-slate-50 rounded-xl p-6">
-            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">IČ</dt>
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">IČO</dt>
             <dd class="text-slate-800 font-medium text-lg">03649873</dd>
           </div>
           <div class="bg-slate-50 rounded-xl p-6">
-            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Předsedkyně</dt>
-            <dd class="text-slate-800 font-medium">Bc. Sabina Křiváková</dd>
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Spisová značka</dt>
+            <dd class="text-slate-800 font-medium leading-relaxed">S 11690 vedená u Krajského soudu v Ostravě</dd>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Datum vzniku</dt>
+            <dd class="text-slate-800 font-medium">17. prosince 2014</dd>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6">
+            <dt class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Statutární orgán</dt>
+            <dd class="text-slate-800 font-medium">Předsedkyně — Bc. Sabina Křiváková</dd>
           </div>
         </dl>
       </div>
@@ -137,9 +143,14 @@ import Layout from '../layouts/Layout.astro';
   <footer class="bg-white border-t border-slate-100 py-8">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
       <p>&copy; {new Date().getFullYear()} Společenství vlastníků Lumírova 8,10</p>
-      <p class="text-center sm:text-right max-w-sm">
-        Tento web nepoužívá žádné sledovací skripty ani cookies třetích stran.
-      </p>
+      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <a href="/ochrana-osobnich-udaju" class="hover:text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 rounded">
+          Ochrana osobních údajů
+        </a>
+        <p class="text-center sm:text-right max-w-sm">
+          Tento web nepoužívá žádné sledovací skripty ani cookies třetích stran.
+        </p>
+      </div>
     </div>
   </footer>
 </Layout>
